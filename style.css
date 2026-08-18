@@ -232,10 +232,10 @@ h2 span {
 }
 
 
-/* TERMINAL */
+/* TRANSFER PANEL */
 
 .terminal-window {
-    border: 1px solid rgba(255,255,255,.1);
+    border: 1px solid rgba(255,255,255,.10);
     border-radius: 15px;
     overflow: hidden;
     background: #090d16;
@@ -253,7 +253,8 @@ h2 span {
     border-bottom: 1px solid var(--line);
     color: #697588;
     font-size: 10px;
-    letter-spacing: .14em;
+    font-weight: 600;
+    letter-spacing: .12em;
 }
 
 .terminal-dots {
@@ -271,6 +272,7 @@ h2 span {
 
 .terminal-lock {
     color: var(--accent);
+    font-size: 13px;
 }
 
 .terminal-body {
@@ -280,16 +282,22 @@ h2 span {
 .terminal-line {
     margin-bottom: 10px;
     color: #b9c3d1;
-    font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px;
+    line-height: 1.5;
 }
 
 .terminal-line.muted {
-    color: #596476;
+    margin-bottom: 18px;
+    color: #697588;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: .08em;
 }
 
 .green {
     color: var(--accent);
     margin-right: 8px;
+    font-weight: 700;
 }
 
 .terminal-divider {
@@ -329,7 +337,8 @@ h2 span {
     display: flex;
     justify-content: space-between;
     color: var(--accent);
-    font: 10px ui-monospace, monospace;
+    font-size: 10px;
+    font-weight: 600;
     letter-spacing: .1em;
 }
 
@@ -1400,7 +1409,14 @@ footer {
 
 .visitor-counter {
     color: #687487;
-    font-size: 12px;
+    font-size: 11px;
+    letter-spacing: .02em;
+    white-space: nowrap;
+}
+
+.visitor-separator {
+    margin: 0 5px;
+    color: #3f4a5a;
 }
 
 .visitor-counter strong {
