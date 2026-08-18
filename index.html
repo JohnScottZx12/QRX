@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="QRX — secure offline data transfer using QR technology.">
+
+    <meta name="theme-color" content="#070a12">
+
+    <title>QRX — Secure Offline Data Transfer</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="navbar">
+    <div class="container nav-inner">
+
+        <a href="#home" class="brand">
+            <span class="brand-mark">Q</span>
+            <span>QRX</span>
+        </a>
+
+        <nav class="nav-links">
+            <a href="#features">Features</a>
+            <a href="#how-it-works">How it works</a>
+            <a href="#security">Security</a>
+            <a href="#download">Download</a>
+        </nav>
+
+        <a href="#download" class="nav-button">
+            Get QRX
+        </a>
+
+    </div>
+</header>
+
+
+<main>
+
+<section class="hero" id="home">
+
+    <div class="hero-glow glow-one"></div>
+    <div class="hero-glow glow-two"></div>
+
+    <div class="container hero-grid">
+
+        <div class="hero-content">
+
+            <div class="eyebrow">
+                <span class="status-dot"></span>
+                OFFLINE-FIRST DATA TRANSFER
+            </div>
+
+            <h1>
+                Move data.
+                <span>Without the network.</span>
+            </h1>
+
+            <p class="hero-text">
+                QRX enables secure transfer of files, text and URLs
+                through QR codes — without relying on cloud services
+                or network connectivity.
+            </p>
+
+            <div class="hero-actions">
+                <a href="#download" class="button button-primary">
+                    Download QRX
+                    <span>↗</span>
+                </a>
+
+                <a href="#how-it-works" class="button button-secondary">
+                    See how it works
+                </a>
+            </div>
+
+            <div class="hero-meta">
+                <span>● Offline capable</span>
+                <span>● QR-based transfer</span>
+                <span>● Local processing</span>
+            </div>
+
+        </div>
+
+
+        <div class="hero-visual">
+
+            <div class="terminal-window">
+
+                <div class="terminal-top">
+                    <div class="terminal-dots">
+                        <i></i>
+                        <i></i>
+                        <i></i>
+                    </div>
+
+                    <span>QRX TRANSFER</span>
+
+                    <span class="terminal-lock">⌁</span>
+                </div>
+
+                <div class="terminal-body">
+
+                    <div class="terminal-line muted">
+                        $ qrx transfer
+                    </div>
+
+                    <div class="terminal-line">
+                        <span class="green">✓</span>
+                        Preparing data...
+                    </div>
+
+                    <div class="terminal-line">
+                        <span class="green">✓</span>
+                        Processing locally
+                    </div>
+
+                    <div class="terminal-line">
+                        <span class="green">✓</span>
+                        Generating QR transfer
+                    </div>
+
+                    <div class="terminal-line">
+                        <span class="green">✓</span>
+                        Transfer ready
+                    </div>
+
+                    <div class="terminal-divider"></div>
+
+                    <div class="qr-placeholder">
+
+                        <div class="qr-grid">
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                            <span></span><span></span><span></span>
+                        </div>
+
+                    </div>
+
+                    <div class="terminal-footer">
+                        <span>TRANSFER READY</span>
+                        <span>LOCAL</span>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="trust-strip">
+
+    <div class="container trust-inner">
+
+        <span>DESIGNED FOR</span>
+
+        <div>ISOLATED ENVIRONMENTS</div>
+        <div>SECURE NETWORKS</div>
+        <div>OFFLINE WORKFLOWS</div>
+        <div>SENSITIVE DATA</div>
+
+    </div>
+
+</section>
+
+
+
+<section class="section webapp-section" id="webapp">
+    <div class="container">
+
+        <div class="section-heading center">
+            <div class="eyebrow">QRX WEBAPP</div>
+            <h2>Transfer data directly in your browser.</h2>
+            <p>
+                No installation required. Your data is processed locally
+                on this device.
+            </p>
+        </div>
+
+        <div class="webapp-card">
+
+            <div class="webapp-tabs">
+                <button
+                    class="webapp-tab active"
+                    id="webappEncodeTab"
+                    type="button"
+                >
+                    ENCODE
+                </button>
+
+                <button
+                    class="webapp-tab"
+                    id="webappDecodeTab"
+                    type="button"
+                >
+                    DECODE
+                </button>
+            </div>
+
+            <div id="webappEncode" class="webapp-panel">
+
+                <div class="webapp-security">
+                    <button
+                        type="button"
+                        class="security-choice active"
+                        data-protection="standard"
+                    >
+                        <strong>STANDARD</strong>
+                        <span>No password</span>
+                    </button>
+
+                    <button
+                        type="button"
+                        class="security-choice"
+                        data-protection="password"
+                    >
+                        <strong>PASSWORD PROTECTED</strong>
+                        <span>Additional protection</span>
+                    </button>
+                </div>
+
+                <div class="webapp-input-group">
+
+                    <label for="webappContentType">
+                        CONTENT
+                    </label>
+
+                    <select id="webappContentType">
+                        <option value="text">Text</option>
+                        <option value="url">URL</option>
+                        <option value="file">File</option>
+                    </select>
+
+                </div>
+
+                <div
+                    class="webapp-input-group"
+                    id="webappTextGroup"
+                >
+                    <label for="webappText">
+                        DATA
+                    </label>
+
+                    <textarea
+                        id="webappText"
+                        rows="5"
+                        placeholder="Enter text to transfer..."
+                    ></textarea>
+                </div>
+
+                <div
+                    class="webapp-input-group"
+                    id="webappFileGroup"
+                    hidden
+                >
+                    <label for="webappFile">
+                        FILE
+                    </label>
+
+                    <input
+                        id="webappFile"
+                        type="file"
+                    >
+                </div>
+
+                <div
+                    class="webapp-input-group"
+                    id="webappPasswordGroup"
+                    hidden
+                >
+                    <label for="webappPassword">
+                        PASSWORD
+                    </label>
+
+                    <input
+                        id="webappPassword"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="Enter password"
+                    >
+
+                    <input
+                        id="webappPasswordConfirm"
+                        type="password"
+                        autocomplete="new-password"
+                        placeholder="Confirm password"
+                    >
+                </div>
+
+                <button
+                    id="webappGenerate"
+                    class="button button-primary webapp-action"
+                    type="button"
+                >
+                    GENERATE QR
+                </button>
+
+                <div
+                    id="webappEncodeStatus"
+                    class="webapp-status"
+                ></div>
+
+                <div
+                    id="webappQrOutput"
+                    class="webapp-qr-output"
+                    hidden
+                ></div>
+
+            </div>
+
+            <div
+                id="webappDecode"
+                class="webapp-panel"
+                hidden
+            >
+
+                <div class="webapp-input-group">
+
+                    <label for="webappQrFiles">
+                        QR IMAGE(S)
+                    </label>
+
+                    <input
+                        id="webappQrFiles"
+                        type="file"
+                        accept="image/png,image/jpeg,image/webp"
+                        multiple
+                    >
+
+                </div>
+
+                <button
+                    id="webappDecodeButton"
+                    class="button button-primary webapp-action"
+                    type="button"
+                >
+                    DECODE QR
+                </button>
+
+                <div
+                    id="webappDecodeStatus"
+                    class="webapp-status"
+                ></div>
+
+                <div
+                    id="webappDecodeResult"
+                    class="webapp-result"
+                    hidden
+                ></div>
+
+            </div>
+
+            <div class="webapp-privacy">
+                <span>●</span>
+                Processing happens locally in your browser.
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="section" id="features">
+
+    <div class="container">
+
+        <div class="section-heading">
+
+            <div class="eyebrow">CAPABILITIES</div>
+
+            <h2>
+                Simple transfer.
+                <span>Serious control.</span>
+            </h2>
+
+            <p>
+                QRX is designed around a simple principle:
+                keep the transfer process local and under your control.
+            </p>
+
+        </div>
+
+
+        <div class="feature-grid">
+
+            <article class="feature-card">
+
+                <div class="feature-icon">⌁</div>
+
+                <h3>Offline First</h3>
+
+                <p>
+                    Transfer information without requiring
+                    internet connectivity or cloud infrastructure.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">▦</div>
+
+                <h3>QR Transfer</h3>
+
+                <p>
+                    Convert data into QR-based transfer packets
+                    that can be scanned and reconstructed locally.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">◈</div>
+
+                <h3>Local Processing</h3>
+
+                <p>
+                    Data processing happens on the device,
+                    keeping the workflow independent from remote services.
+                </p>
+
+            </article>
+
+
+            <article class="feature-card">
+
+                <div class="feature-icon">↔</div>
+
+                <h3>Files, Text & URLs</h3>
+
+                <p>
+                    Handle different types of information
+                    through one consistent transfer workflow.
+                </p>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="section workflow-section" id="how-it-works">
+
+    <div class="container">
+
+        <div class="section-heading center">
+
+            <div class="eyebrow">WORKFLOW</div>
+
+            <h2>
+                From source to destination.
+                <span>Without the network.</span>
+            </h2>
+
+        </div>
+
+
+        <div class="workflow">
+
+            <div class="workflow-step">
+
+                <div class="step-number">01</div>
+
+                <div class="step-icon">↑</div>
+
+                <h3>Encode</h3>
+
+                <p>
+                    Select the data you want to transfer
+                    and generate a QRX transfer.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step">
+
+                <div class="step-number">02</div>
+
+                <div class="step-icon">▦</div>
+
+                <h3>Transfer</h3>
+
+                <p>
+                    Move the generated QR information
+                    across the physical boundary.
+                </p>
+
+            </div>
+
+
+            <div class="workflow-line"></div>
+
+
+            <div class="workflow-step">
+
+                <div class="step-number">03</div>
+
+                <div class="step-icon">↓</div>
+
+                <h3>Decode</h3>
+
+                <p>
+                    Scan the QR transfer and reconstruct
+                    the original content locally.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="security-section" id="security">
+
+    <div class="container security-grid">
+
+        <div>
+
+            <div class="eyebrow">SECURITY PHILOSOPHY</div>
+
+            <h2>
+                Keep the transfer
+                <span>under your control.</span>
+            </h2>
+
+            <p>
+                QRX is built around offline operation and
+                local data handling. The transfer workflow
+                does not depend on uploading your information
+                to a remote service.
+            </p>
+
+            <div class="security-points">
+
+                <div>
+                    <strong>01</strong>
+                    <span>No cloud dependency</span>
+                </div>
+
+                <div>
+                    <strong>02</strong>
+                    <span>Local data processing</span>
+                </div>
+
+                <div>
+                    <strong>03</strong>
+                    <span>Controlled transfer workflow</span>
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <div class="security-card">
+
+            <div class="security-card-top">
+                <span>QRX</span>
+                <span class="secure-label">SECURE</span>
+            </div>
+
+            <div class="security-card-body">
+
+                <div class="shield">◆</div>
+
+                <h3>Data stays local</h3>
+
+                <p>
+                    Designed for environments where
+                    connectivity is limited or deliberately avoided.
+                </p>
+
+                <div class="security-status">
+                    <span></span>
+                    LOCAL PROCESSING
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section class="download-section" id="download">
+
+    <div class="container">
+
+        <div class="download-card">
+
+            <div>
+
+                <div class="eyebrow">GET QRX</div>
+
+                <h2>
+                    Ready to transfer
+                    <span>offline?</span>
+                </h2>
+
+                <p>
+                    Download QRX and run it locally on your system.
+                    No cloud account required.
+                </p>
+
+            </div>
+
+
+            <div class="download-actions">
+
+                <a href="#" class="button button-primary">
+                    Download Application
+                    <span>↓</span>
+                </a>
+
+                <small>
+                    Python environment required
+                </small>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <div class="footer-brand">
+
+            <div class="brand">
+                <span class="brand-mark">Q</span>
+                <span>QRX</span>
+            </div>
+
+            <p>
+                Secure offline data transfer.
+            </p>
+
+        </div>
+
+
+        <div class="footer-links">
+
+            <a href="#features">Features</a>
+            <a href="#security">Security</a>
+            <a href="#download">Download</a>
+
+        </div>
+
+    </div>
+
+
+    <div class="container footer-bottom">
+
+        <span>QRX 2.0.0</span>
+
+        <span>
+            Your data stays on your device.
+        </span>
+
+    </div>
+
+</footer>
+
+
+<script src="js/qrx-core.js"></script>
+<script src="vendor/qrcode.min.js"></script>
+<script src="vendor/jsQR.js"></script>
+<script src="vendor/jszip.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
